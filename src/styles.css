@@ -142,3 +142,30 @@
     color: var(--color-foreground);
   }
 }
+
+/* Loading screen — dark green gradient, light minimal track */
+@theme {
+  --color-load-bg-start: oklch(0.28 0.09 155);
+  --color-load-bg-end: oklch(0.14 0.05 155);
+  --color-load-track: oklch(0.96 0.02 150 / 25%);
+  --color-load-fill: oklch(0.95 0.06 145);
+  --color-load-text: oklch(0.93 0.04 145 / 80%);
+}
+
+@utility load-progress-bar {
+  animation: load-fill 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes load-fill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@utility load-fade-in {
+  animation: load-fade 0.4s ease-out both;
+}
+
+@keyframes load-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

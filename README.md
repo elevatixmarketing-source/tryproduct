@@ -1,14 +1,19 @@
-# Welcome to your Lovable project
+# SwiftLoad Launch
+
+yar aik green color ki loading screen landing page bana bana aik seconds se kam ma loading ho bohat jald gradiant dark bg dark green color or loading thor light color minimal styleor aik seocnd ke ander wo is link ma redirect hojay 
+https://track.revoffers.com/aff_c?offer_id=1430&aff_id=10776
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://tryproduct.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/99d4b6c3-2ed6-4dc9-8bb7-233b4db1eafa).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +25,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS

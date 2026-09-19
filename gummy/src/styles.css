@@ -1,0 +1,180 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — "Glazed frosted glass" (Bloom Gummies).
+ * Warm cream canvas, frosted glass cards, soft candy accents.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Bloom palette */
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rose: var(--rose);
+  --color-amber: var(--amber);
+  --color-mint: var(--mint);
+  --color-berry: var(--berry);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Bloom palette */
+  --cream: oklch(0.97 0.015 77.1);
+  --ink: oklch(0.302 0.025 34.4);
+  --ink-soft: oklch(0.515 0.036 40.7);
+  --rose: oklch(0.711 0.162 1.4);
+  --amber: oklch(0.778 0.151 66);
+  --mint: oklch(0.762 0.116 165.6);
+  --berry: oklch(0.595 0.161 353.6);
+
+  /* Semantic tokens mapped to the Bloom palette */
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0 / 50%);
+  --card-foreground: var(--ink);
+  --popover: var(--cream);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(1 0 0 / 50%);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(1 0 0 / 55%);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--rose);
+  --accent-foreground: var(--cream);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--cream);
+  --border: oklch(1 0 0 / 60%);
+  --input: oklch(1 0 0 / 60%);
+  --ring: var(--rose);
+
+  --chart-1: var(--rose);
+  --chart-2: var(--amber);
+  --chart-3: var(--mint);
+  --chart-4: var(--berry);
+  --chart-5: var(--ink-soft);
+
+  --sidebar: var(--cream);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: var(--cream);
+  --sidebar-accent: oklch(1 0 0 / 50%);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: oklch(1 0 0 / 60%);
+  --sidebar-ring: var(--rose);
+}
+
+.dark {
+  --background: oklch(0.302 0.025 34.4);
+  --foreground: var(--cream);
+  --card: oklch(0.38 0.03 34.4);
+  --card-foreground: var(--cream);
+  --popover: oklch(0.38 0.03 34.4);
+  --popover-foreground: var(--cream);
+  --primary: var(--cream);
+  --primary-foreground: var(--ink);
+  --secondary: oklch(0.38 0.03 34.4);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.38 0.03 34.4);
+  --muted-foreground: oklch(0.75 0.03 40.7);
+  --accent: var(--rose);
+  --accent-foreground: var(--cream);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: var(--cream);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: var(--rose);
+  --chart-1: var(--rose);
+  --chart-2: var(--amber);
+  --chart-3: var(--mint);
+  --chart-4: var(--berry);
+  --chart-5: oklch(0.75 0.03 40.7);
+  --sidebar: oklch(0.38 0.03 34.4);
+  --sidebar-foreground: var(--cream);
+  --sidebar-primary: var(--rose);
+  --sidebar-primary-foreground: var(--cream);
+  --sidebar-accent: oklch(0.38 0.03 34.4);
+  --sidebar-accent-foreground: var(--cream);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: var(--rose);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+}
+
+/* Motion — soft rise on load, ambient blur drift behind the page */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(26px, -22px) scale(1.06);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.7s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@utility animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
